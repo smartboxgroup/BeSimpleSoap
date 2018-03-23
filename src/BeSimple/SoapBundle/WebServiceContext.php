@@ -43,7 +43,9 @@ class WebServiceContext
     {
         if (null === $this->serviceDefinition) {
             $cache = new ConfigCache(sprintf('%s/%s.definition.php', $this->options['cache_dir'], $this->options['name']), $this->options['debug']);
-            if ($cache->isFresh()) {
+
+            // TODO: Remove false, false is a temporary hack as PHP 7.0 can segfault when trying to deserialize large wsdl definitions.
+            if (false && $cache->isFresh()) {
                 $this->serviceDefinition = include (string) $cache;
             } else {
                 if (!$this->loader->supports($this->options['resource'], $this->options['resource_type'])) {
