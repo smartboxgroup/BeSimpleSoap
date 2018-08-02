@@ -1,6 +1,5 @@
 <?php
 
-require '../../../../../vendor/autoload.php';
 
 use BeSimple\SoapCommon\Helper as BeSimpleSoapHelper;
 use BeSimple\SoapClient\SoapClient as BeSimpleSoapClient;

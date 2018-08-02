@@ -2,7 +2,6 @@
 
 error_reporting(0);
 
-require '../../../../../vendor/autoload.php';
 
 use ass\XmlSecurity\Key as XmlSecurityKey;
 

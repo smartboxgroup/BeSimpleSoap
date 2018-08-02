@@ -1,6 +1,5 @@
 <?php
 
-require '../../../../../vendor/autoload.php';
 
 use BeSimple\SoapClient\SoapClient as BeSimpleSoapClient;
 use BeSimple\SoapClient\WsSecurityFilter as BeSimpleWsSecurityFilter;
