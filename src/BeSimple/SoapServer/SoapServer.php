@@ -129,8 +129,8 @@ class SoapServer extends \SoapServer
         }
 
         // Remove headers added by SoapServer::handle() method
-        header_remove('Content-Length');
-        header_remove('Content-Type');
+        @header_remove('Content-Length');
+        @header_remove('Content-Type');
 
         // wrap response data in SoapResponse object
         $soapResponse = SoapResponse::create(
